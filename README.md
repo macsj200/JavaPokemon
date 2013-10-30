@@ -1,4 +1,4 @@
 JavaPokemon
 ===========
 
-A pokemon clone written in Java
+A Pokemon clone written in Java
