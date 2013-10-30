@@ -1,5 +1,7 @@
 package javapokemon;
 
+import gui.GameWindow;
+
 public class JavaPokemon {
 	private Player player = null;
 
@@ -15,9 +17,6 @@ public class JavaPokemon {
 	}
 	
 	public void start(){
-		//Enter game loop
-		while(true){
-			//Game logic
-		}
+		new GameWindow();
 	}
 }
