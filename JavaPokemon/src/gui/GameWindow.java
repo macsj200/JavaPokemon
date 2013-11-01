@@ -16,9 +16,8 @@ public class GameWindow extends JFrame {
 		initComponents();
 		addComponents();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		pack();
 		setVisible(true);
-		
-		
 		
 	}
 	private void initComponents(){
