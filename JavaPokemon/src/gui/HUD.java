@@ -20,17 +20,24 @@ public class HUD extends JPanel {
 	}
 	
 	private void initComponents(){
-		sprite = new PokemonSprite(pokemon.getSprite());
+		//sprite = new PokemonSprite(pokemon.getSprite());
 		healthBar = new HealthBar();
 	}
 	
 	private void addComponents(){
-		add(sprite);
+		//add(sprite);
 		add(healthBar);
 	}
 	
 	private class HealthBar extends JPanel{
-		
+		public void paintComponent(Graphics g){
+			super.paintComponent(g);
+			Graphics2D g2d = (Graphics2D) g;
+			
+			
+			
+			g2d.dispose();
+		}
 	}
 	
 	private class PokemonSprite extends JPanel{
