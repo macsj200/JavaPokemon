@@ -21,7 +21,7 @@ public class GameWindow extends JFrame {
 		
 	}
 	private void initComponents(){
-		pokemonSelector = new JComboBox(new PartySelectorModel(gameInstance.getPlayer().getParty()));
+		pokemonSelector = new JComboBox(gameInstance.getPlayer().getParty().toArray());
 	}
 	private void addComponents(){
 		getContentPane().add(pokemonSelector);
