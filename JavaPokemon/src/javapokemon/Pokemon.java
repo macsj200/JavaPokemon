@@ -20,4 +20,9 @@ public class Pokemon {
 		return name;
 	}
 	
+	@Override
+	public String toString(){
+		return name;
+	}
+	
 }
