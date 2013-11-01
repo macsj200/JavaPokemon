@@ -12,7 +12,8 @@ public class GameWindow extends JFrame {
 		super("JavaPokemon");
 		//Set title of window
 		this.gameInstance = gameInstance;
-		
+		initComponents();
+		addComponents();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		
@@ -20,6 +21,10 @@ public class GameWindow extends JFrame {
 		
 	}
 	private void initComponents(){
-		pokemonSelector = new JComboBox();
+		pokemonSelector = new JComboBox(gameInstance.getPlayer().getParty().toArray());
+	}
+	private void addComponents(){
+		getContentPane().add(pokemonSelector);
+		
 	}
 }
