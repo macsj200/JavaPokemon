@@ -11,6 +11,7 @@ import listeners.PokemonSelectorListener;
 public class GameWindow extends JFrame { 
 	private JComboBox pokemonSelector = null;
 	private JavaPokemon gameInstance = null;
+	private HUD currentHud = null;
 	
 	public GameWindow(JavaPokemon gameInstance){
 		super("JavaPokemon");

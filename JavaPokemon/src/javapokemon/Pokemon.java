@@ -5,7 +5,8 @@ import java.awt.image.BufferedImage;
 public class Pokemon {
 	private String name = null;
 	private boolean staged = false;
-	private int health;
+	private int maxHealth = 100;
+	private int currentHealth = 100;
 	
 	Pokemon(String name){
 		this.name = name;
@@ -31,7 +32,6 @@ public class Pokemon {
 	
 	private void setStats(){
 		// TODO lookup stats from database
-		health = 100;
 	}
 	public String getName() {
 		return name;
