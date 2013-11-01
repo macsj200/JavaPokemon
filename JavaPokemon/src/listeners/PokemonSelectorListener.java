@@ -22,8 +22,9 @@ public class PokemonSelectorListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
+		Pokemon pokemon = (Pokemon) ((JComboBox) arg0.getSource()).getSelectedItem();
 		try {
-			player.stagePokemon((Pokemon) ((JComboBox) arg0.getSource()).getSelectedItem());
+			player.stagePokemon(pokemon);
 		} catch (FaintedException e) {
 			System.out.println("That pokemon is fainted!");
 		} catch (StagedException e){
