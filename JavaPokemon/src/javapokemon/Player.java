@@ -3,6 +3,7 @@ package javapokemon;
 import java.util.ArrayList;
 
 import exceptions.FaintedException;
+import exceptions.StagedException;
 
 public class Player {
 	private ArrayList<Pokemon> party = null;
@@ -18,16 +19,21 @@ public class Player {
 		try {
 			stagePokemon(party.get(0));
 		} catch (FaintedException e) {
-			System.out.println("That pokemon is fainted!");
+		}
+		catch (StagedException e){
 		}
 	}
 	
-	public void stagePokemon(Pokemon pokemon) throws FaintedException{
+	public void stagePokemon(Pokemon pokemon) throws FaintedException, StagedException{
 		if(pokemon.isFainted()){
 			throw new FaintedException(pokemon);
 		}
+		else if(pokemon.isStaged()){
+			throw new StagedException(pokemon);
+		}
 		else{
 			stagedPokemon = pokemon;
+			stagedPokemon.stage();
 		}
 	}
 	
