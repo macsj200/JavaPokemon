@@ -25,6 +25,9 @@ public class Player {
 	}
 	
 	public void stagePokemon(Pokemon pokemon) throws FaintedException, StagedException{
+		if(stagedPokemon != null){
+			stagedPokemon.destage();
+		}
 		if(pokemon.isFainted()){
 			throw new FaintedException(pokemon);
 		}
