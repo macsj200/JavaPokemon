@@ -1,5 +1,7 @@
 package javapokemon;
 
+import java.awt.image.BufferedImage;
+
 public class Pokemon {
 	private String name = null;
 	private boolean staged = false;
@@ -38,6 +40,11 @@ public class Pokemon {
 	@Override
 	public String toString(){
 		return name;
+	}
+
+	public BufferedImage getSprite() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
