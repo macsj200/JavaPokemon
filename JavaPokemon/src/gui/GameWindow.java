@@ -2,8 +2,11 @@ package gui;
 
 import javapokemon.JavaPokemon;
 import javapokemon.Pokemon;
+
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+
+import listeners.PokemonSelectorListener;
 
 public class GameWindow extends JFrame { 
 	private JComboBox pokemonSelector = null;
@@ -22,6 +25,7 @@ public class GameWindow extends JFrame {
 	}
 	private void initComponents(){
 		pokemonSelector = new JComboBox(gameInstance.getPlayer().getParty().toArray());
+		pokemonSelector.addActionListener(new PokemonSelectorListener(gameInstance.getPlayer()));
 	}
 	private void addComponents(){
 		getContentPane().add(pokemonSelector);
