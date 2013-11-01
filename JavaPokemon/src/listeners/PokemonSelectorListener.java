@@ -1,5 +1,8 @@
 package listeners;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javapokemon.Player;
 import javapokemon.Pokemon;
 
@@ -10,7 +13,7 @@ import javax.swing.event.ChangeListener;
 import exceptions.FaintedException;
 import exceptions.StagedException;
 
-public class PokemonSelectorListener implements ChangeListener {
+public class PokemonSelectorListener implements ActionListener {
 	private Player player = null;
 	
 	public PokemonSelectorListener(Player player){
@@ -18,7 +21,7 @@ public class PokemonSelectorListener implements ChangeListener {
 	}
 
 	@Override
-	public void stateChanged(ChangeEvent arg0) {
+	public void actionPerformed(ActionEvent arg0) {
 		try {
 			player.stagePokemon((Pokemon) ((JComboBox) arg0.getSource()).getSelectedItem());
 		} catch (FaintedException e) {
