@@ -35,6 +35,7 @@ public class Player {
 		//Populate the player's party
 		
 		party.add(new Pokemon("Pikachu"));
+		party.add(new Pokemon("Snorlax"));
 	}
 	
 	public ArrayList<Pokemon> getParty() {
