@@ -17,6 +17,6 @@ public class JavaPokemon {
 	}
 	
 	public void start(){
-		new GameWindow(); // Make a new game window instance
+		new GameWindow(this); // Make a new game window instance
 	}
 }
