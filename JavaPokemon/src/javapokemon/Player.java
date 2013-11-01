@@ -36,4 +36,8 @@ public class Player {
 		
 		party.add(new Pokemon("Pikachu"));
 	}
+	
+	public ArrayList<Pokemon> getParty() {
+		return party;
+	}
 }
