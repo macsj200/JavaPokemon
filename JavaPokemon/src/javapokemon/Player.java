@@ -34,6 +34,6 @@ public class Player {
 	public void populateParty(){
 		//Populate the player's party
 		
-		
+		party.add(new Pokemon("Pikachu"));
 	}
 }
