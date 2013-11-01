@@ -13,7 +13,7 @@ public class JavaPokemon {
 	}
 	
 	public JavaPokemon(){
-		player = new Player();
+		player = new Player(); //make a new player
 	}
 	
 	public void start(){
