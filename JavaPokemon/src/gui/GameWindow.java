@@ -8,12 +8,11 @@ import javax.swing.JFrame;
 public class GameWindow extends JFrame { 
 	private JComboBox pokemonSelector = null;
 	private JavaPokemon gameInstance = null;
-	private Pokemon[] party = null;
+	
 	public GameWindow(JavaPokemon gameInstance){
 		super("JavaPokemon");
 		//Set title of window
 		this.gameInstance = gameInstance;
-		party = (Pokemon[]) gameInstance.getPlayer().getParty().toArray();
 		initComponents();
 		addComponents();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -23,7 +22,7 @@ public class GameWindow extends JFrame {
 		
 	}
 	private void initComponents(){
-		pokemonSelector = new JComboBox(party);
+		pokemonSelector = new JComboBox(new PartySelectorModel(gameInstance.getPlayer().getParty()));
 	}
 	private void addComponents(){
 		getContentPane().add(pokemonSelector);
