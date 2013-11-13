@@ -1,6 +1,7 @@
 package databases;
 
 import javapokemon.Move;
+import exceptions.NoMoveException;
 
 public class MovesFactory {
 
