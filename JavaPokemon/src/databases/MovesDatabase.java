@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import exceptions.NoMoveException;
 import javapokemon.Move;
 
 public class MovesDatabase {
@@ -34,11 +35,28 @@ public class MovesDatabase {
 				splitLine = line.split(csvSplitBy);
 				
 				if(splitLine[0].equals(pokemonName)){
-					moves[0] = factory.makeMove(splitLine[1]);
-					moves[1] = factory.makeMove(splitLine[2]);
-					moves[2] = factory.makeMove(splitLine[3]);
-					moves[3] = factory.makeMove(splitLine[4]);
+					try {
+						moves[0] = factory.makeMove(splitLine[1]);
+						
+					} catch (NoMoveException e) {
+						System.out.println("There isn't a move for that yet");
+					}
 					
+					try {
+						moves[1] = factory.makeMove(splitLine[2]);
+					} catch (NoMoveException e) {
+						System.out.println("There isn't a move for that yet");
+					}
+					try {
+						moves[2] = factory.makeMove(splitLine[3]);
+					} catch (NoMoveException e) {
+						System.out.println("There isn't a move for that yet");
+					}
+					try {
+						moves[3] = factory.makeMove(splitLine[4]);
+					} catch (NoMoveException e) {
+						System.out.println("There isn't a move for that yet");
+					}
 					
 				}
 			}
